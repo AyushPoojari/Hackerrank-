@@ -1,0 +1,28 @@
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+list1 = []
+s = 3
+
+for i in range(0,x+1):
+    for j in range (0,y+1):
+        for k in range (0,z+1):
+            ele1= i
+            ele2 = j
+            ele3 = k
+            
+            if (i+j+k!=n):
+                list1.append(ele1)
+                list1.append(ele2)
+                list1.append(ele3)
+
+def divide_chunks(l, s):
+    for i in range(0, len(l), s):
+        yield l[i:i + s]
+
+
+x = list(divide_chunks(list1, s))
+print(x)
